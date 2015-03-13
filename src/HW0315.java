@@ -1,6 +1,10 @@
 /**
- * Created by c4q-nali on 3/13/15.
- */
+ * Access Code 2.1
+ * Na Li
+ * Main.java
+ * Home work : an adventure game in forest.
+ **/
+
 package c4q.annalinewyork;
 
 import java.util.Scanner;
@@ -18,6 +22,9 @@ public class Main {
         System.out.println("Wait, there is a coded lock on the door, Can you guess the number? " +
                 "Choose a number between 10-20,please");
 
+        //User input number, is guess right, keep going.
+        //If guess wrong, keep guessing.
+
         while (true) {
 
             Scanner pin = new Scanner(System.in);
@@ -26,9 +33,6 @@ public class Main {
             if (guessInt == doorpin)
 
                 break;
-
-                // else if (guessInt >20 && guessInt <10)
-                // System.out.println("Please remember choose from 10-20.");
 
             else
                 System.out.println("Oh,No,Keep trying~");
@@ -41,6 +45,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.next();
 
+        //User make a first choice between 1 and 2.
         if (answer.equals("1")) {
             System.out.println("The rabbit suddenly talk to you: Thank you for your kindness, I will give you a gift.");
             System.out.println("You wanna: Yes, I'll take it.");
@@ -49,6 +54,7 @@ public class Main {
             Scanner scanner2 = new Scanner (System.in);
             String answer2 = scanner.next();
 
+            //If user choose 1, continue make a second choice.
             if (answer2.equalsIgnoreCase("yes") || answer2 .equalsIgnoreCase("y"))
                 System.out.println("The rabbit gives you a big carrot.");
             else if (answer2.equalsIgnoreCase("no")||answer2.equalsIgnoreCase("n"))
@@ -58,12 +64,14 @@ public class Main {
                 System.out.println("Oops. I need a correct input, please.");
         }
 
+        //User make a first choice between 1 and 2.
         else if (answer.equals("2")){
             System.out.println("Are you sure? 1.YES.  2.NO. Let me think about it." );
 
             Scanner scanner3 = new Scanner (System.in);
             String answer3 = scanner.next();
 
+            //If user choose 2, continue make a second choice.
             if (answer3.equalsIgnoreCase("yes") || answer3 .equalsIgnoreCase("y"))
                 System.out.println("When you try to kill this rabbit, the door is open,owner of house come back." +
                         "He so angry, and ask you get out of his house.");
@@ -76,6 +84,7 @@ public class Main {
             Scanner scanner4 = new Scanner (System.in);
             String answer4 = scanner.next();
 
+            //If user choose "No" under the second choice, then make a third choice.
             if (answer4.equalsIgnoreCase("yes") || answer4 .equalsIgnoreCase("y"))
                 System.out.println("The rabbit gives you a big carrot.");
             else if (answer4.equalsIgnoreCase("no")||answer.equalsIgnoreCase("n"))
